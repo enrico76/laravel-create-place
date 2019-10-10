@@ -14,3 +14,6 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/main', 'PlaceController@index') -> name('plc.index');
+Route::get('/place/create', 'PlaceController@create') -> name('plc.create');
+Route::post('/main', 'PlaceController@store') -> name('plc.store');
